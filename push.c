@@ -1,32 +1,25 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "monty.h"
 
-/* Implementation of push opcode */
-void push(stack_t **stack, int n, unsigned int line_number)
+/**
+ * push - Push an element to the stack.
+ * @stack: double pointer to the head of the stack.
+ * @line_number: line number in the file.
+ *
+ * Return: void.
+ */
+
+void push(stack_t **stack, unsigned int line_number)
 {
-    /* Create a new node for the integer */
-    stack_t *new_node = malloc(sizeof(stack_t));
-    if (new_node == NULL)
-    {
-        fprintf(stderr, "Error: malloc failed\n");
-        exit(EXIT_FAILURE);
-    }
+	int n;
 
-    new_node->n = n;
-    new_node->prev = NULL;
+	char *data = strtok(NULL, "\n\t\r ");
 
-    /* If the stack is empty, set the new node as the top of the stack */
-    if (*stack == NULL)
-    {
-        new_node->next = NULL;
-        *stack = new_node;
-    }
-    else
-    {
-        /* Add the new node to the top of the stack */
-        new_node->next = *stack;
-        (*stack)->prev = new_node;
-        *stack = new_node;
-    }
+	if (data == NULL || check_if_number(data) == 0)
+	{
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	n = atoi(data);
+	add_dnodeint(stack, n);
 }
