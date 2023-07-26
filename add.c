@@ -1,23 +1,26 @@
 #include "monty.h"
 
 /*
- * add - Adds the top two elements of the stack.
+ * add - add the top two elements of the stack
  * @stack: Double pointer to the stack.
  * @line_number: The line number where the 'add' opcode is.
+ *
+ * Description: If the stack contains less than two elements, the function
+ * prints an error message and exits with EXIT_FAILURE.
  * Return: 0(success)
  */
 
 void add(stack_t **stack, unsigned int line_number)
 {
-    int tmp;
+	int tmp;
 
-    if (*stack == NULL || (*stack)->next == NULL)
-    {
-        fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
-        exit(EXIT_FAILURE);
-    }
+	if (*stack == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 
-    tmp = (*stack)->n + (*stack)->next->n;
-    pop(stack, line_number);
-    (*stack)->n = tmp;
+	tmp = (*stack)->n + (*stack)->next->n;
+	pop(stack, line_number);
+	(*stack)->n = tmp;
 }

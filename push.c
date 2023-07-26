@@ -12,7 +12,7 @@ void push(stack_t **stack, unsigned int line_number)
 {
 	int n;
 
-	char* data = strtok(NULL, "\n\t\r ");
+	char *data = strtok(NULL, "\n\t\r ");
 
 	if (data == NULL || check_if_number(data) == 0)
 	{

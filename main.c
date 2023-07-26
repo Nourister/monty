@@ -4,8 +4,8 @@
 char *global_data = NULL;
 
 /*
- * main - Entry point of our program. 
- * @argc: The number of command-line arguments. 
+ * main - Entry point of our program.
+ * @argc: The number of command-line arguments.
  * @argv: The command-line arguments.
  * Return: EXIT_SUCCESS on success, EXIT_FAILURE on error.
  */
