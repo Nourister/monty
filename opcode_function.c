@@ -1,5 +1,10 @@
 #include "monty.h"
-
+/**
+ * get_opcode_function - Searches for an opcode function.
+ * @opcode: The opcode to search for.
+ * Return: The function pointer to the matched opcode function, or NULL if no
+ * match is found.
+ */
 opcode_f get_opcode_function(char *opcode)
 {
     instruction_t instructions[] = {
