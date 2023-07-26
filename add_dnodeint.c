@@ -1,5 +1,12 @@
 #include "monty.h"
 
+/*
+ * add_dnodeint - Adds a new node at the beginning of a stack_t list.
+ * @stack: Double pointer to the head of the stack.
+ * @n: The integer data for the new node.
+ * Return: The address of the new element, or NULL if it failed.
+ */
+
 void add_dnodeint(stack_t **stack, int n)
 {
 	stack_t *new_node;

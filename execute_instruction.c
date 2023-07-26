@@ -1,5 +1,10 @@
 #include "monty.h"
-
+/*
+ * execute_instruction - Executes the correct function for each opcode.
+ * @stack: Double pointer to the stack.
+ * @line_number: The line number where the opcode is.
+ * Return: 0(success)
+ */
 void execute_instruction(stack_t **stack, unsigned int line_number)
 {
 	int i = 0;

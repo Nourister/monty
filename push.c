@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/*
+ * push - Executes the 'push' opcode.
+ * @stack: Double pointer to the stack.
+ * @line_number: The line number where the 'push' opcode is.
+ * Return: 0(success)
+ */
 void push(stack_t **stack, unsigned int line_number)
 {
     int n;
