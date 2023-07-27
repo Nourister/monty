@@ -21,6 +21,7 @@ void execute_instruction(stack_t **stack, unsigned int line_number)
 		{"stack_div", stack_div},
 		{"mul", mul},
 		{"mod", mod},
+		{"pchar", pchar},
 		{NULL, NULL}
 	};
 
