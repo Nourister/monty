@@ -18,6 +18,7 @@ void execute_instruction(stack_t **stack, unsigned int line_number)
 		{"add", add},
 		{"nop", nop},
 		{"sub", sub},
+		{"stack_div", stack_div},
 		{NULL, NULL}
 	};
 
