@@ -19,7 +19,8 @@ void execute_instruction(stack_t **stack, unsigned int line_number)
 		{"nop", nop},
 		{"sub", sub},
 		{"stack_div", stack_div},
-		 {"mul", mul},
+		{"mul", mul},
+		{"mod", mod},
 		{NULL, NULL}
 	};
 

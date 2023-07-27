@@ -51,5 +51,6 @@ void sub(stack_t **stack, unsigned int line_number);
 void stack_div(stack_t **stack, unsigned int line_number);
 void process_file(const char *filename);
 void mul(stack_t **stack, unsigned int line_number);
+void mod(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */
